@@ -13,4 +13,12 @@ def step_impl(context):
 
 @then('Contact: I see navbar')
 def step_impl(context):
-    context.contact_page.verify_navbar()
+    context.contact_page.verify_navbar_home_link()
+    context.contact_page.verify_navbar_login_link()
+    context.contact_page.verify_navbar_register_link()
+    context.contact_page.verify_navbar_contact_link()
+
+@then('Contact: The title url "{url}"')
+def step_impl(context, url):
+    context.contact_page.verify_page_url(url)
+

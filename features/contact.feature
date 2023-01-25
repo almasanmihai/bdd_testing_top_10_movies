@@ -10,3 +10,7 @@ Feature: Contact page
   @smoke
   Scenario:
     Then Contact: I see navbar
+
+  @smoke
+  Scenario:
+    Then Contact: The title url "http://almasanmihai.pythonanywhere.com/contact"

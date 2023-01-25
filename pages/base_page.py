@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 
 
 class BasePage(Browser, TestCase):
+    # Locators
     HOME_NAVBAR = (By.XPATH, '//a[text()="Home"]/parent::li/parent::ul')
     LOGIN_NAVBAR = (By.XPATH, '//a[text()="Log In"]/parent::li/parent::ul')
     REGISTER_NAVBAR = (By.XPATH, '//a[text()="Register"]/parent::li/parent::ul')
@@ -22,9 +23,18 @@ class BasePage(Browser, TestCase):
         actual_url = self.driver.current_url
         assert actual_url == expected, 'url do not match'
 
-    def verify_navbar(self):
+    def verify_navbar_home_link(self):
         self.wait_for_element(*self.HOME_NAVBAR)
         assert self.driver.find_element(*self.HOME_NAVBAR).is_displayed(), 'home in navbar not displayed'
+
+    def verify_navbar_login_link(self):
+        self.wait_for_element(*self.LOGIN_NAVBAR)
         assert self.driver.find_element(*self.LOGIN_NAVBAR).is_displayed(), 'login in navbar not displayed'
+
+    def verify_navbar_register_link(self):
+        self.wait_for_element(*self.REGISTER_NAVBAR)
         assert self.driver.find_element(*self.REGISTER_NAVBAR).is_displayed(), 'register in navbar not displayed'
+
+    def verify_navbar_contact_link(self):
+        self.wait_for_element(*self.CONTACT_NAVBAR)
         assert self.driver.find_element(*self.CONTACT_NAVBAR).is_displayed(), 'contact in navbar not displayed'

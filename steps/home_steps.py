@@ -10,6 +10,7 @@ def step_impl(context):
 def step_impl(context):
     context.home_page.verify_login_link()
 
+
 @then('Home: I see register link')
 def step_impl(context):
     context.home_page.verify_register_link()
@@ -24,21 +25,10 @@ def step_impl(context, title):
 def step_impl(context, url):
     context.home_page.verify_page_url(url)
 
-@then('Home: I see home in navbar')
+
+@then('Home: I see navbar')
 def step_impl(context):
-    context.home_page.verify_home_navbar()
-
-@then('Home: I see login in navbar')
-def step_impl(context):
-    context.home_page.verify_login_navbar()
-
-@then('Home: I see register in navbar')
-def step_impl(context):
-    context.home_page.verify_register_navbar()
-
-@then('Home: I see contact in navbar')
-def step_impl(context):
-    context.home_page.verify_contact_navbar()
-
-
-
+    context.contact_page.verify_navbar_home_link()
+    context.contact_page.verify_navbar_login_link()
+    context.contact_page.verify_navbar_register_link()
+    context.contact_page.verify_navbar_contact_link()

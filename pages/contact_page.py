@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 
 
 class ContactPage(BasePage):
+    # Locators
     EMAIL_LINK = (By.XPATH, '//a[@href="mailto:almasanmihai@gmail.com"]')
 
     def navigate_to_contact(self):
