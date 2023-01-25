@@ -19,6 +19,7 @@ Feature: Home page
   Scenario:
     Then Home: The title url "http://almasanmihai.pythonanywhere.com/"
 
+  @regression
   @smoke
   Scenario:
     Then Home: I see home in navbar
