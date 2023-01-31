@@ -13,4 +13,4 @@ Feature: Contact page
 
   @smoke
   Scenario:
-    Then Contact: The title url "http://almasanmihai.pythonanywhere.com/contact"
+    Then Contact: The url is "http://almasanmihai.pythonanywhere.com/contact"

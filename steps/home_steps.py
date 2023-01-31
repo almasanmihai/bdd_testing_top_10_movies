@@ -21,7 +21,7 @@ def step_impl(context, title):
     context.home_page.verify_page_title(title)
 
 
-@then('Home: The title url "{url}"')
+@then('Home: The url is "{url}"')
 def step_impl(context, url):
     context.home_page.verify_page_url(url)
 

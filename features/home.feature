@@ -17,7 +17,7 @@ Feature: Home page
 
   @smoke
   Scenario:
-    Then Home: The title url "http://almasanmihai.pythonanywhere.com/"
+    Then Home: The url is "http://almasanmihai.pythonanywhere.com/"
 
   @smoke
   Scenario:

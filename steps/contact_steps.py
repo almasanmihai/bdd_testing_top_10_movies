@@ -18,7 +18,7 @@ def step_impl(context):
     context.contact_page.verify_navbar_register_link()
     context.contact_page.verify_navbar_contact_link()
 
-@then('Contact: The title url "{url}"')
+@then('Contact: The url is "{url}"')
 def step_impl(context, url):
     context.contact_page.verify_page_url(url)
 
