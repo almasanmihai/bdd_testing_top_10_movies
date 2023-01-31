@@ -32,3 +32,13 @@ def step_impl(context):
     context.contact_page.verify_navbar_login_link()
     context.contact_page.verify_navbar_register_link()
     context.contact_page.verify_navbar_contact_link()
+
+@then('Home: I see modified navbar')
+def step_impl(context):
+    context.contact_page.verify_navbar_home_link()
+    context.contact_page.verify_navbar_logout_link()
+    context.contact_page.verify_navbar_contact_link()
+
+@then('Home: I see welcome back text')
+def step_impl(context):
+    context.home_page.verify_welcome_back_text()

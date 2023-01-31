@@ -12,3 +12,7 @@ def step_impl(context):
     context.register_page.verify_navbar_login_link()
     context.register_page.verify_navbar_register_link()
     context.register_page.verify_navbar_contact_link()
+
+@then('Register: I see Register text heading')
+def step_impl(context):
+    context.register_page.verify_register_text()

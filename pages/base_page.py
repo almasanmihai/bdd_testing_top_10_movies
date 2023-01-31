@@ -11,6 +11,7 @@ class BasePage(Browser, TestCase):
     LOGIN_NAVBAR = (By.XPATH, '//a[text()="Log In"]/parent::li/parent::ul')
     REGISTER_NAVBAR = (By.XPATH, '//a[text()="Register"]/parent::li/parent::ul')
     CONTACT_NAVBAR = (By.XPATH, '//a[text()="Contact"]/parent::li/parent::ul')
+    LOGOUT_NAVBAR = (By.XPATH, '//a[text()="Log Out"]/parent::li/parent::ul')
 
     def wait_for_element(self, by, selector):
         WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((by, selector)))
@@ -38,3 +39,7 @@ class BasePage(Browser, TestCase):
     def verify_navbar_contact_link(self):
         self.wait_for_element(*self.CONTACT_NAVBAR)
         assert self.driver.find_element(*self.CONTACT_NAVBAR).is_displayed(), 'contact in navbar not displayed'
+
+    def verify_navbar_logout_link(self):
+        self.wait_for_element(*self.LOGOUT_NAVBAR)
+        assert self.driver.find_element(*self.LOGOUT_NAVBAR).is_displayed(), 'log out in navbar not displayed'

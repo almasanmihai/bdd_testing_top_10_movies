@@ -6,3 +6,7 @@ Feature: Register
   @smoke
   Scenario:
     Then Register: I see navbar
+
+  @smoke
+  Scenario:
+    Then Register: I see Register text heading
